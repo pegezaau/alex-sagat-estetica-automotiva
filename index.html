@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Sagat Estética Automotiva — Goiânia/GO | Vitrificação e Polimento Técnico</title>
+<meta name="description" content="Alex Sagat Estética Automotiva em Goiânia/GO: polimento técnico, vitrificação de pintura, higienização interna e mais. Atendimento somente com hora marcada. Orçamento sem compromisso.">
+<style>
+  :root{
+    --laranja:#ff7d0a;
+    --laranja2:#ffa53a;
+    --preto:#0a0a0b;
+    --fundo:#101012;
+    --cartao:#17171a;
+    --cartao2:#1e1e22;
+    --linha:#2a2a30;
+    --texto:#f5f3f0;
+    --suave:#b9b4ac;
+    --verde:#25d366;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--fundo);color:var(--texto);font-family:'Segoe UI',Arial,Helvetica,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:'Arial Black','Segoe UI',Arial,sans-serif;text-transform:uppercase;letter-spacing:.5px}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  section{padding:64px 0}
+
+  /* ---------- topo ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(10,10,11,.92);backdrop-filter:blur(8px);border-bottom:3px solid var(--laranja)}
+  .topo{display:flex;align-items:center;gap:12px;padding:12px 0}
+  .marca{display:flex;align-items:center;gap:12px}
+  .marca-texto .nome{font-family:'Arial Black',Arial,sans-serif;font-size:1.05rem;letter-spacing:1px;line-height:1.05}
+  .marca-texto .nome span{color:var(--laranja)}
+  .marca-texto .sub{font-size:.62rem;letter-spacing:3.5px;color:var(--suave);text-transform:uppercase}
+  .topo .btn-topo{margin-left:auto}
+
+  /* ---------- botoes ---------- */
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--laranja);color:#140b00;font-weight:800;padding:14px 26px;border-radius:10px;font-size:1rem;box-shadow:0 6px 22px rgba(255,125,10,.35);transition:transform .15s ease,background .15s ease;text-transform:uppercase;letter-spacing:.4px}
+  .btn:hover{background:var(--laranja2);transform:translateY(-2px)}
+  .btn.pequeno{padding:10px 18px;font-size:.85rem}
+  .btn.escuro{background:#1c1c20;color:var(--texto);border:1px solid var(--linha);box-shadow:none}
+  .btn.escuro:hover{border-color:var(--laranja);color:var(--laranja)}
+
+  /* ---------- hero ---------- */
+  .hero{background:radial-gradient(1100px 480px at 85% -10%,rgba(255,125,10,.28),transparent 60%),linear-gradient(180deg,#0a0a0b 0%,#141416 100%);padding:56px 0 64px;border-bottom:1px solid var(--linha);position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:auto -60px -70px auto;width:340px;height:340px;background:repeating-linear-gradient(45deg,rgba(255,125,10,.14) 0 14px,transparent 14px 30px);transform:rotate(0deg);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center;position:relative;z-index:1}
+  .selo{display:inline-block;background:rgba(255,125,10,.14);border:1px solid var(--laranja);color:var(--laranja2);font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+  .hero h1{font-size:2.6rem;line-height:1.04;margin-bottom:8px}
+  .hero h1 .destaque{color:var(--laranja)}
+  .hero .frase{font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:12px}
+  .hero p.lead{color:var(--suave);font-size:1.05rem;margin-bottom:26px;max-width:34rem}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-foto{border-radius:18px;overflow:hidden;border:1px solid var(--linha);box-shadow:0 24px 60px rgba(0,0,0,.55)}
+  .hero-foto img{width:100%;height:auto;display:block}
+
+  /* ---------- barra de confianca ---------- */
+  .confianca{background:var(--preto);border-bottom:1px solid var(--linha);padding:20px 0}
+  .confianca .itens{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .confianca .item{display:flex;align-items:center;gap:9px;font-weight:700;font-size:.95rem}
+  .confianca .item svg{flex:none}
+
+  /* ---------- secoes ---------- */
+  .titulo-secao{font-size:1.9rem;margin-bottom:10px}
+  .titulo-secao span{color:var(--laranja)}
+  .sub-secao{color:var(--suave);max-width:44rem;margin-bottom:34px}
+  .grupo{margin-bottom:40px}
+  .grupo:last-child{margin-bottom:0}
+  .grupo-titulo{display:flex;align-items:center;gap:12px;font-size:1.1rem;margin-bottom:18px}
+  .grupo-titulo::after{content:"";flex:1;height:1px;background:var(--linha)}
+  .grupo-titulo .num{background:var(--laranja);color:#140b00;font-family:'Arial Black',Arial,sans-serif;font-size:.85rem;width:30px;height:30px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .card{background:var(--cartao);border:1px solid var(--linha);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
+  .card.destaque-card{border-color:var(--laranja);background:linear-gradient(180deg,rgba(255,125,10,.10),var(--cartao))}
+  .card h3{font-size:1.05rem}
+  .card p{color:var(--suave);font-size:.94rem;flex:1}
+  .card .mini-cta{color:var(--laranja);font-weight:800;font-size:.9rem;text-transform:uppercase;letter-spacing:.4px}
+  .card .mini-cta:hover{color:var(--laranja2)}
+  .lista-servicos{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+  .lista-servicos li{background:var(--cartao);border:1px solid var(--linha);border-radius:10px;padding:13px 16px;font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:10px}
+  .lista-servicos li::before{content:"";width:9px;height:9px;background:var(--laranja);border-radius:2px;transform:rotate(45deg);flex:none}
+
+  /* ---------- passos ---------- */
+  .passos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .passo{background:var(--cartao);border:1px solid var(--linha);border-radius:14px;padding:24px}
+  .passo .n{font-family:'Arial Black',Arial,sans-serif;font-size:2rem;color:var(--laranja);line-height:1}
+  .passo h3{font-size:1rem;margin:10px 0 6px}
+  .passo p{color:var(--suave);font-size:.94rem}
+
+  /* ---------- sobre ---------- */
+  .sobre{background:var(--preto);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+  .sobre-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:38px;align-items:center}
+  .sobre p{color:var(--suave);margin-bottom:14px}
+  .sobre p strong{color:var(--texto)}
+  .fatos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+  .fato{background:var(--cartao);border:1px solid var(--linha);border-radius:12px;padding:16px}
+  .fato .rotulo{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--laranja2);font-weight:700;margin-bottom:4px}
+  .fato .valor{font-weight:700;font-size:.98rem}
+
+  /* ---------- faq ---------- */
+  details{background:var(--cartao);border:1px solid var(--linha);border-radius:12px;margin-bottom:12px;padding:0 20px}
+  summary{cursor:pointer;font-weight:700;padding:17px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--laranja);font-size:1.4rem;font-weight:900;line-height:1}
+  details[open ] summary::after{content:"–"}
+  details p{color:var(--suave);padding:0 0 18px;font-size:.96rem}
+
+  /* ---------- cta final / contato ---------- */
+  .cta-final{background:linear-gradient(135deg,#ff7d0a,#e35f00);color:#160c00;text-align:center;padding:64px 0}
+  .cta-final h2{font-size:2rem;margin-bottom:10px}
+  .cta-final p{font-weight:600;margin-bottom:26px}
+  .cta-final .btn{background:#0a0a0b;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .cta-final .btn:hover{background:#1c1c20}
+  .contato-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .contato-item{background:var(--cartao);border:1px solid var(--linha);border-radius:14px;padding:22px}
+  .contato-item .rotulo{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--laranja2);font-weight:700;margin-bottom:6px}
+  .contato-item .valor{font-weight:700}
+  .contato-item a.valor:hover{color:var(--laranja)}
+  footer{background:var(--preto);border-top:3px solid var(--laranja);padding:28px 0;text-align:center;color:var(--suave);font-size:.88rem}
+  footer .nome{color:var(--texto);font-weight:800;text-transform:uppercase;letter-spacing:1px}
+
+  /* ---------- flutuante ---------- */
+  .flutuante{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--verde);color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(0,0,0,.45)}
+
+  @media (max-width:820px){
+    .hero-grid,.sobre-grid{grid-template-columns:1fr}
+    .hero h1{font-size:2.05rem}
+    .hero-foto{max-width:440px}
+    .topo .btn-topo{display:none}
+    section{padding:48px 0}
+    .fatos{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= TOPO ================= -->
+<header>
+  <div class="wrap topo">
+    <a class="marca" href="#inicio" aria-label="Alex Sagat Estética Automotiva">
+      <svg width="46" height="46" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M10 22 L16 10 L26 19 L32 8 L38 19 L48 10 L54 22 L50 30 L14 30 Z" fill="#ff7d0a"/>
+        <rect x="13" y="33" width="38" height="5" rx="2" fill="#f5f3f0"/>
+        <text x="32" y="57" text-anchor="middle" font-family="Arial Black, Arial" font-size="19" fill="#ff7d0a">AS</text>
+      </svg>
+      <span class="marca-texto">
+        <span class="nome">ALEX <span>SAGAT</span></span><br>
+        <span class="sub">Estética Automotiva</span>
+      </span>
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="selo">Goiânia · GO</span>
+      <h1>Seu carro com brilho de <span class="destaque">zero quilômetro</span></h1>
+      <p class="frase">VITRIFICAÇÃO · POLIMENTO TÉCNICO · HIGIENIZAÇÃO</p>
+      <p class="lead">Na Alex Sagat Estética Automotiva, cada carro é tratado nos mínimos detalhes — da pintura às rodas. Atendimento somente com hora marcada e <strong style="color:#fff">orçamento sem compromisso</strong>.</p>
+      <div class="ctas">
+        <a class="btn" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20sem%20compromisso." target="_blank" rel="noopener">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.03h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.25 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.22-.08-.38-.12-.54.13-.16.24-.62.8-.76.96-.14.17-.28.19-.52.06-.25-.12-1.05-.38-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.54-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.25-.93.91-.93 2.22 0 1.31.95 2.57 1.08 2.75.14.17 1.87 2.85 4.53 4 .63.27 1.13.44 1.51.56.64.2 1.22.17 1.68.1.51-.08 1.57-.64 2.15-1.28.58-.64.58-1.19.41-1.31-.16-.11-.37-.18-.62-.3z"/></svg>
+          Orçamento sem compromisso
+        </a>
+        <a class="btn escuro" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+    <div class="hero-foto">
+      <img src="arte-sagat.jpg" alt="Alex Sagat Estética Automotiva — carro esportivo laranja">
+    </div>
+  </div>
+</div>
+
+<!-- ================= BARRA DE CONFIANÇA ================= -->
+<div class="confianca">
+  <div class="wrap itens">
+    <span class="item"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ff7d0a" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Goiânia · GO</span>
+    <span class="item"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ff7d0a" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg> Somente com hora marcada</span>
+    <span class="item"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ff7d0a" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Orçamento sem compromisso</span>
+    <span class="item"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ff7d0a" aria-hidden="true"><path d="M12 1.8l2.6 5.9 6.4.5-4.9 4.2 1.6 6.2L12 15.4 6.3 18.6l1.6-6.2L3 8.2l6.4-.5z"/></svg> Acabamento detalhado</span>
+    <a class="item" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener" style="color:var(--laranja2)">Agendar meu horário →</a>
+  </div>
+</div>
+
+<!-- ================= SERVIÇOS ================= -->
+<section id="servicos">
+  <div class="wrap">
+    <h2 class="titulo-secao">Nossos <span>serviços</span></h2>
+    <p class="sub-secao">Tudo o que o seu carro precisa em um só lugar. Toque em um serviço e peça o orçamento direto no WhatsApp.</p>
+
+    <div class="grupo">
+      <h3 class="grupo-titulo"><span class="num">1</span> Pintura e Proteção</h3>
+      <div class="cards">
+        <div class="card destaque-card">
+          <h3>Vitrificação de Pintura</h3>
+          <p>Proteção cerâmica que cria uma camada de brilho profundo sobre a pintura, facilitando a limpeza e conservando o visual de carro novo por muito mais tempo.</p>
+          <a class="mini-cta" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Quero%20um%20or%C3%A7amento%20de%20vitrifica%C3%A7%C3%A3o%20de%20pintura." target="_blank" rel="noopener">Pedir orçamento →</a>
+        </div>
+        <div class="card destaque-card">
+          <h3>Polimento Técnico</h3>
+          <p>Correção da pintura com técnica e produtos profissionais: remove riscos leves, manchas e oxidação, devolvendo o brilho original do carro.</p>
+          <a class="mini-cta" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Quero%20um%20or%C3%A7amento%20de%20polimento%20t%C3%A9cnico." target="_blank" rel="noopener">Pedir orçamento →</a>
+        </div>
+      </div>
+      <ul class="lista-servicos" style="margin-top:16px">
+        <li>Cristalização</li>
+        <li>Revitalização</li>
+      </ul>
+    </div>
+
+    <div class="grupo">
+      <h3 class="grupo-titulo"><span class="num">2</span> Limpeza e Detalhamento</h3>
+      <div class="cards">
+        <div class="card destaque-card">
+          <h3>Higienização Interna</h3>
+          <p>Limpeza profunda de bancos, teto, carpetes e ar-condicionado. Interior renovado, sem odores e com aspecto de novo.</p>
+          <a class="mini-cta" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Quero%20um%20or%C3%A7amento%20de%20higieniza%C3%A7%C3%A3o%20interna." target="_blank" rel="noopener">Pedir orçamento →</a>
+        </div>
+        <div class="card">
+          <h3>Lavada Detalhada</h3>
+          <p>Lavagem completa e minuciosa, com cuidado em cada friso, emblema e cantinho que a lavagem comum não alcança.</p>
+          <a class="mini-cta" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20sem%20compromisso." target="_blank" rel="noopener">Pedir orçamento →</a>
+        </div>
+      </div>
+      <ul class="lista-servicos" style="margin-top:16px">
+        <li>Lavada Técnica de Motor</li>
+        <li>Motor com Verniz</li>
+      </ul>
+    </div>
+
+    <div class="grupo">
+      <h3 class="grupo-titulo"><span class="num">3</span> Rodas, Películas e Som</h3>
+      <div class="cards">
+        <div class="card destaque-card">
+          <h3>Reforma de Rodas</h3>
+          <p>Suas rodas renovadas: recuperação de arranhões e danos do dia a dia com acabamento profissional.</p>
+          <a class="mini-cta" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Quero%20um%20or%C3%A7amento%20de%20reforma%20de%20rodas." target="_blank" rel="noopener">Pedir orçamento →</a>
+        </div>
+        <div class="card destaque-card">
+          <h3>Insulfilm</h3>
+          <p>Aplicação de película com acabamento preciso, mais conforto térmico, privacidade e proteção para o interior do carro.</p>
+          <a class="mini-cta" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Quero%20um%20or%C3%A7amento%20de%20insulfilm." target="_blank" rel="noopener">Pedir orçamento →</a>
+        </div>
+      </div>
+      <ul class="lista-servicos" style="margin-top:16px">
+        <li>Window Blue e Premium</li>
+        <li>Som Ambiente</li>
+        <li>Multimídia</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMO FUNCIONA ================= -->
+<section style="background:var(--preto);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)">
+  <div class="wrap">
+    <h2 class="titulo-secao">Como <span>funciona</span></h2>
+    <p class="sub-secao">Simples e sem enrolação — do primeiro contato à entrega do carro.</p>
+    <div class="passos">
+      <div class="passo">
+        <div class="n">1</div>
+        <h3>Chama no WhatsApp</h3>
+        <p>Conta o que o seu carro precisa e receba o atendimento direto do Alex.</p>
+      </div>
+      <div class="passo">
+        <div class="n">2</div>
+        <h3>Receba o orçamento</h3>
+        <p>Orçamento claro e <strong style="color:#fff">sem compromisso</strong>, do jeito que o serviço pede.</p>
+      </div>
+      <div class="passo">
+        <div class="n">3</div>
+        <h3>Agende e brilhe</h3>
+        <p>Marque o melhor horário — o atendimento é somente com hora marcada, com dedicação total ao seu carro.</p>
+      </div>
+    </div>
+    <div style="margin-top:30px">
+      <a class="btn" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Agendar meu horário</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOBRE ================= -->
+<section class="sobre">
+  <div class="wrap sobre-grid">
+    <div class="hero-foto" style="max-width:420px">
+      <img src="arte-sagat.jpg" alt="Logotipo Alex Sagat Estética Automotiva">
+    </div>
+    <div>
+      <h2 class="titulo-secao">Quem cuida do seu carro é o <span>Alex</span></h2>
+      <p>A <strong>Alex Sagat Estética Automotiva</strong> é um estúdio de detalhamento em Goiânia/GO onde quem atende, orçamenta e executa o serviço é o próprio dono. Nada de atendimento impessoal: você fala direto com quem vai cuidar do seu carro.</p>
+      <p>Do polimento técnico à vitrificação, da higienização à reforma de rodas, cada serviço é feito com hora marcada e atenção total aos detalhes.</p>
+      <p>Acompanhe o trabalho no Instagram: <a href="https://www.instagram.com/alexsagat2esteticaautomotiva" target="_blank" rel="noopener" style="color:var(--laranja2);font-weight:700">@alexsagat2esteticaautomotiva</a></p>
+      <div class="fatos">
+        <div class="fato"><div class="rotulo">Onde fica</div><div class="valor">R. Rondônia, Quadra D – Lote 23 · Goiânia/GO</div></div>
+        <div class="fato"><div class="rotulo">Atendimento</div><div class="valor">Somente com hora marcada</div></div>
+        <div class="fato"><div class="rotulo">Orçamento</div><div class="valor">Sem compromisso</div></div>
+        <div class="fato"><div class="rotulo">E-mail</div><div class="valor">alexsagat78@gmail.com</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section>
+  <div class="wrap">
+    <h2 class="titulo-secao">Perguntas <span>frequentes</span></h2>
+    <p class="sub-secao"> </p>
+    <details>
+      <summary>Preciso agendar antes de levar o carro?</summary>
+      <p>Sim. O atendimento é somente com hora marcada — assim o seu carro recebe dedicação total, sem fila e sem pressa. Chame no WhatsApp e escolha o melhor horário.</p>
+    </details>
+    <details>
+      <summary>O orçamento é realmente sem compromisso?</summary>
+      <p>É sim. Você pede o orçamento pelo WhatsApp, avalia com calma e só agenda se fizer sentido pra você. Sem pressão e sem custo.</p>
+    </details>
+    <details>
+      <summary>Quais serviços vocês fazem?</summary>
+      <p>Polimento técnico, vitrificação de pintura, cristalização, revitalização, lavada detalhada, higienização interna, lavada técnica de motor, motor com verniz, reforma de rodas, insulfilm, window blue e premium, som ambiente e multimídia.</p>
+    </details>
+    <details>
+      <summary>Onde fica a Alex Sagat Estética Automotiva?</summary>
+      <p>Na R. Rondônia, Quadra D – Lote 23, Goiânia/GO — CEP 74363-008, na região do Panorama Parque.</p>
+    </details>
+    <details>
+      <summary>Como peço um orçamento?</summary>
+      <p>É só chamar no WhatsApp (62) 98406-9551 contando qual serviço você quer — ou tocar em qualquer botão desta página, que a mensagem já vai pronta.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ================= CTA FINAL ================= -->
+<div class="cta-final">
+  <div class="wrap">
+    <h2>Seu carro merece esse cuidado</h2>
+    <p>Peça agora seu orçamento sem compromisso e agende seu horário.</p>
+    <a class="btn" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20sem%20compromisso." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  </div>
+</div>
+
+<!-- ================= CONTATO ================= -->
+<section>
+  <div class="wrap">
+    <h2 class="titulo-secao">Fale com a <span>Alex Sagat</span></h2>
+    <p class="sub-secao">Escolha o canal — o retorno é direto do Alex.</p>
+    <div class="contato-grid">
+      <div class="contato-item">
+        <div class="rotulo">WhatsApp</div>
+        <a class="valor" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20sem%20compromisso." target="_blank" rel="noopener">(62) 98406-9551</a>
+      </div>
+      <div class="contato-item">
+        <div class="rotulo">Endereço</div>
+        <div class="valor">R. Rondônia, Quadra D – Lote 23<br>Goiânia/GO · CEP 74363-008</div>
+      </div>
+      <div class="contato-item">
+        <div class="rotulo">E-mail</div>
+        <a class="valor" href="mailto:alexsagat78@gmail.com">alexsagat78@gmail.com</a>
+      </div>
+      <div class="contato-item">
+        <div class="rotulo">Instagram</div>
+        <a class="valor" href="https://www.instagram.com/alexsagat2esteticaautomotiva" target="_blank" rel="noopener">@alexsagat2esteticaautomotiva</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="nome">Alex Sagat Estética Automotiva</div>
+    <div>R. Rondônia, Quadra D – Lote 23 · Goiânia/GO · Atendimento somente com hora marcada</div>
+  </div>
+</footer>
+
+<!-- ================= FLUTUANTE ================= -->
+<a class="flutuante" href="https://wa.me/5562984069551?text=Ol%C3%A1%2C%20Alex%21%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20sem%20compromisso." target="_blank" rel="noopener" aria-label="Pedir orçamento no WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.03h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.25 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.22-.08-.38-.12-.54.13-.16.24-.62.8-.76.96-.14.17-.28.19-.52.06-.25-.12-1.05-.38-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.54-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.25-.93.91-.93 2.22 0 1.31.95 2.57 1.08 2.75.14.17 1.87 2.85 4.53 4 .63.27 1.13.44 1.51.56.64.2 1.22.17 1.68.1.51-.08 1.57-.64 2.15-1.28.58-.64.58-1.19.41-1.31-.16-.11-.37-.18-.62-.3z"/></svg>
+</a>
+
+</body>
+</html>
